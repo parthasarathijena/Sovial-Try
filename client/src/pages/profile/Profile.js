@@ -15,6 +15,7 @@ function Profile() {
     useEffect(() => {
         const fetchUser = async () => {
             const fetchData = await fetch(`https://social-try.onrender.com/api/user?username=${username}`, {
+                mode: 'no-cors',
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json"
