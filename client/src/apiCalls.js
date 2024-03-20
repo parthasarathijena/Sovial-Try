@@ -5,7 +5,6 @@ export const loginCall = async (userCredential, dispatch) => {
     dispatch({ type: "LOGIN_START" });
     try {
         const res = await fetch('https://social-try.onrender.com/api/auth/login', {
-            mode: 'no-cors',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
