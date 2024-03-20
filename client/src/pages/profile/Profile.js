@@ -33,8 +33,8 @@ function Profile() {
                 <div className='profileRight'>
                     <div className='profileRightTop'>
                         <div className='profileCover'>
-                            <img className='profileCoverImg' src={user.coverPicture ? PF + user.coverPicture : PF + 'person/noCover.jpg'} alt='' />
-                            <img className='profileUserImg' src={user.profilePicture ? PF + user.profilePicture : PF + 'person/noAvatar.png'} alt='' />
+                            <img className='profileCoverImg' crossorigin="anonymous" src={user.coverPicture ? PF + 'api/image/' +user.coverPicture : PF + 'images/person/noCover.jpg'} alt='' />
+                            <img className='profileUserImg' crossorigin="anonymous" src={user.profilePicture ? PF + 'api/image/' +user.profilePicture : PF + 'images/person/noAvatar.png'} alt='' />
                         </div>
                         <div className='profileInfo'>
                             <h4 className='profileInfoName'>{user.username}</h4>
