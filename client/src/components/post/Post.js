@@ -64,7 +64,7 @@ function Post({ post }) {
       <div className='postWrapper'>
         <div className='postTop'>
           <div className='postTopLeft' onClick={() => navigate(`/profile/${user.username}`)}>
-            <img className='postProfileImg' src={user.profilePicture ? publicFolder + user.profilePicture : publicFolder + 'person/noAvatar.png'} alt='' />
+            <img className='postProfileImg' crossorigin="anonymous" src={user.profilePicture ? publicFolder + 'api/image/' + user.profilePicture : publicFolder + 'images/person/noAvatar.png'} alt='' />
             <span className='postUserName'>{user.username}</span>
             <span className='postDate'>{format(post.createdAt)}</span>
           </div>
@@ -74,12 +74,12 @@ function Post({ post }) {
         </div>
         <div className='postCenter'>
           <span className='postText'>{post?.desc}</span>
-          <img className='postImg' src={publicFolder + post.img} alt='' />
+          <img className='postImg' crossorigin="anonymous" src={publicFolder + 'api/image/' + post.img} alt='' />
         </div>
         <div className='postBottom'>
           <div className='postBottomLeft'>
-            <img className='likeIcon' onClick={likeHandler} src={`${publicFolder}/like.png`} alt='' />
-            <img className='likeIcon' onClick={likeHandler} src={`${publicFolder}/heart.png`} alt='' />
+            <img className='likeIcon' crossorigin="anonymous" onClick={likeHandler} src={`${publicFolder}images/like.png`} alt='' />
+            <img className='likeIcon' crossorigin="anonymous" onClick={likeHandler} src={`${publicFolder}images/heart.png`} alt='' />
             <span className='postLikeCounter'>{like} people like it</span>
           </div>
           <div className='postBottomRight'>
