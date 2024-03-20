@@ -51,7 +51,7 @@ function Topbar() {
                         <span className='topbarIconBadge'>3</span>
                     </div>
                 </div>
-                <img src={PF+user.profilePicture} className='topbarImg' alt='' onClick={()=>navigate(`/profile/${user.username}`)}/>
+                <img crossorigin="anonymous" src={user.profilePicture ? PF+'api/image/'+user.profilePicture : PF+'images/person/noAvatar.png'} className='topbarImg' alt='' onClick={()=>navigate(`/profile/${user.username}`)}/>
             </div>
         </div>
     )
