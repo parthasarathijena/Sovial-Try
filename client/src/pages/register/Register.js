@@ -32,7 +32,6 @@ function Register() {
             }
             try{
                 await fetch('https://social-try.onrender.com/api/auth/register',{
-                    mode: 'no-cors',
                     method:"POST",
                     headers:{
                         "Content-Type" : "application/json"
