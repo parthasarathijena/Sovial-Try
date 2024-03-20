@@ -22,6 +22,7 @@ function Rightbar({ user }) {
         const getFriends = async () => {
           const endpoint = user ? `https://social-try.onrender.com/api/user/friends/${user._id}` : `/user/friends/${currentuser._id}`
           const fetchData = await fetch(endpoint, {
+            mode: 'no-cors',
             method: "GET",
             headers: {
               "Content-Type": "application/json"
@@ -48,6 +49,7 @@ function Rightbar({ user }) {
     try{
       followed 
       ? await fetch('https://social-try.onrender.com/api/user/'+ user._id +'/unfollow', {
+        mode: 'no-cors',
         method: 'PUT',
         headers: {
           "Content-Type": "application/json"
@@ -55,6 +57,7 @@ function Rightbar({ user }) {
         body:JSON.stringify({userId : currentuser._id})
       })
       : await fetch('https://social-try.onrender.com/api/user/'+ user._id +'/follow', {
+        mode: 'no-cors',
         method: 'PUT',
         headers: {
           "Content-Type": "application/json"
