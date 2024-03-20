@@ -22,7 +22,6 @@ function Rightbar({ user }) {
         const getFriends = async () => {
           const endpoint = user ? `https://social-try.onrender.com/api/user/friends/${user._id}` : `/user/friends/${currentuser._id}`
           const fetchData = await fetch(endpoint, {
-            mode: 'no-cors',
             method: "GET",
             headers: {
               "Content-Type": "application/json"
