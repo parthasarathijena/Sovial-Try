@@ -8,6 +8,7 @@ const multer = require('multer')
 const paths = require('path')
 const cors = require('cors');
 
+require('./dbconn/conn')
 app.use(cors());
 app.use(
   helmet({
@@ -24,7 +25,6 @@ const { MongoClient } = require('mongodb');
 
 
 dotenv.config({ path: './config.env' });
-require('./dbconn/conn')
 
 app.use("/images", express.static(paths.join(__dirname, "/public/images")));
 
