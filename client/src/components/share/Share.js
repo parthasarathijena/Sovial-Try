@@ -29,7 +29,6 @@ function Share() {
             try {
                 const uploadPost = async () => {
                     await fetch('https://social-try.onrender.com/api/upload', {
-                        mode: 'no-cors',
                         method: 'POST',
                         body: formdata
                     })
@@ -42,7 +41,6 @@ function Share() {
         try {
             const postUser = async () => {
                 await fetch('https://social-try.onrender.com/api/post/', {
-                    mode: 'no-cors',
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json"
