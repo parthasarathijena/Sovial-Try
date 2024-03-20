@@ -15,12 +15,14 @@ function Feed({ username }) {
     const fetchPost = async () => {
       const fetchData = username
         ? await fetch('https://social-try.onrender.com/api/post/profile/' + username, {
+          mode: 'no-cors',
           method: 'GET',
           headers: {
             "Content-Type": "application/json"
           }
         })
         : await fetch('https://social-try.onrender.com/api/post/timeline/' + user._id, {
+          mode: 'no-cors',
           method: 'GET',
           headers: {
             "Content-Type": "application/json"
