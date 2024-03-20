@@ -68,7 +68,7 @@ function Sidebar() {
                     {allUser.map(elem => {
                         return (
                             <li className='sidebarFriend'>
-                                <img className='sidebarFriendImg' src={publicFolder + '/' + elem.profilePicture} alt='' />
+                                <img className='sidebarFriendImg' crossorigin="anonymous" src={elem.profilePicture ? publicFolder + 'api/image/' + elem.profilePicture : publicFolder +'images/person/noAvatar.png'} alt='' />
                                 <span className='sidebarFriendName'>{elem.username}</span>
                             </li>
                         )
