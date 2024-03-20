@@ -70,18 +70,18 @@ function Rightbar({ user }) {
     return (
       <>
         <div className='birthdayContainer'>
-          <img className='birthdayImg' src={`${publicFolder}/gift.png`} alt='' />
+          <img className='birthdayImg' crossorigin="anonymous" src={`${publicFolder}images/gift.png`} alt='' />
           <span className='birthdayText'>
             <b>Pola Foster</b> and <b>3 other friends</b> have a bithday today.
           </span>
         </div>
-        <img className='rightbarAd' src={`${publicFolder}/ad.png`} alt='' />
+        <img className='rightbarAd' crossorigin="anonymous" src={`${publicFolder}images/ad.png`} alt='' />
         <h4 className='rightbarTitle'>Online Friends</h4>
         <ul className='rightbarFriendList'>
           {friends.map(elem => (
             <li className='rightbarFriend' onClick={() => navigate(`/profile/${elem.username}`)}>
               <div className='rightbarProfileImgContainer'>
-                <img className='rightbarProfileImg' src={elem.profilePicture ? publicFolder + elem.profilePicture : publicFolder + 'person/noAvatar.png'} alt='' />
+                <img className='rightbarProfileImg' crossorigin="anonymous" src={elem.profilePicture ? publicFolder + 'api/image/'+ elem.profilePicture : publicFolder + 'images/person/noAvatar.png'} alt='' />
                 <span className='rightbarOnline'></span>
               </div>
               <span className='rightbarUsername'>{elem.username}</span>
@@ -123,7 +123,7 @@ function Rightbar({ user }) {
             {friends.map((elem) => {
               return (
                 <div className='rightbarFollowing' onClick={() => {setShouldRunEffect(true) ; navigate(`/profile/${elem.username}`);}}>
-                  <img className='rightbarFollowingImg' src={elem.profilePicture ? publicFolder + elem.profilePicture : publicFolder + 'person/noAvatar.png'} alt='' />
+                  <img className='rightbarFollowingImg' crossorigin="anonymous" src={elem.profilePicture ? publicFolder + 'api/image/' + elem.profilePicture : publicFolder + 'images/person/noAvatar.png'} alt='' />
                   <span className='rightbarFollowingName'>{elem.username}</span>
                 </div>
               )
