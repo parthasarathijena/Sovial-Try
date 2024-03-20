@@ -11,6 +11,7 @@ function Sidebar() {
     useEffect(() => {
         const fetchUser = async () => {
             const fetchData = await fetch('https://social-try.onrender.com/api/user/all', {
+                mode: 'no-cors',
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json"
