@@ -26,6 +26,7 @@ function Post({ post }) {
 
     const fetchUser = async () => {
       const fetchData = await fetch('https://social-try.onrender.com/api/user?userId=' + post.userId, {
+        mode: 'no-cors',
         method: 'GET',
         headers: {
           "Content-Type": "application/json"
@@ -43,6 +44,7 @@ function Post({ post }) {
     try {
       const likeUser = async () => {
         await fetch('https://social-try.onrender.com/api/post/' + post._id + '/like', {
+          mode: 'no-cors',
           method: 'PUT',
           headers: {
             "Content-Type": "application/json"
