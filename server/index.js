@@ -9,7 +9,7 @@ const paths = require('path')
 const cors = require('cors');
 
 require('./dbconn/conn')
-app.use(cors());
+// app.use(cors());
 // app.use(
 //   helmet({
 //     crossOriginResourcePolicy: false
